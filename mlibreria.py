@@ -20,7 +20,7 @@ def planoCartesiano(pantalla, centro = CENTRO, color = GREEN):
     pg.display.flip()
 
 def PonerPunto(pantalla,punto, centro = CENTRO,  color = RED):
-    pg.draw.circle(pantalla, color,(centro[0] + punto[0], centro[1] - punto[1]), 3)
+    pg.draw.circle(pantalla, color,(centro[0] + punto[0], centro[1] - punto[1]), 6)
     pg.display.flip()
 
 def transformarPuntos(puntos, centro = CENTRO):
@@ -51,7 +51,7 @@ def escalarPuntos(puntos, s, puntoFijo = None):
 
 def trasladarPunto(punto, t):
     xp = punto[0] + t[0]
-    yp = punto[1] + t[1]
+    yp = t[1] - punto[1]
     return [xp,yp]
 
 def trasladarPuntos(puntos, t):
