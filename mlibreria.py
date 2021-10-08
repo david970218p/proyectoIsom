@@ -30,6 +30,11 @@ def transformarPuntos(puntos, centro = CENTRO):
       lista.append(nuevopunto)
     return lista
 
+
+def CartesianoAPantalla(punto, centro = CENTRO):
+    return [centro[0] + punto[0], centro[1] - punto[1]]
+
+
 def dibujarTriangulo(pantalla, puntos, color = SALMON):
     pg.draw.lines(pantalla, color, True, puntos)
     pg.display.flip()
